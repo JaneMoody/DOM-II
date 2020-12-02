@@ -1,7 +1,10 @@
-//<----  Declaring each button  ---->
+//<----  Declaring each button & HTML  ---->
 let buttonClick1 = document.querySelector(".destination:nth-of-type(1) .btn");
 let buttonClick2 = document.querySelector(".destination:nth-of-type(2) .btn");
 let buttonClick3 = document.querySelector(".destination:nth-of-type(3) .btn");
+let container = document.querySelector(".container");
+let destH4 = document.querySelector(".destination h4");
+let destP = document.querySelector(".destination p");
 
 //<----  #1 Event Listener (Counts the times clicked)  ---->
 buttonClick1.addEventListener("click", (event) => {
@@ -52,4 +55,22 @@ buttonClick1.addEventListener("click", function () {
   buttonClick1.innerText = "Welcome!";
 });
 
-//<---- #6 Event Listener () ---->
+//<---- #6 Event Listener (Change button to text to Click) ---->
+buttonClick2.addEventListener("click", function () {
+  buttonClick2.innerHTML = "Clicked!";
+});
+
+//<---- #7 Event Listener (mouseover to change style of BG for .container) ---->
+buttonClick3.addEventListener("mouseover", function () {
+  container.style.backgroundColor = "red";
+});
+
+//<---- #8 Event Listener (mouseout to change style of BG for .intro h2) ---->
+buttonClick1.addEventListener("mouseout", function () {
+  destH4.style.color = "blue";
+});
+
+//<---- #9 Event Listener (Click to change the document background to a diff color) ---->
+buttonClick2.addEventListener("inputBlur", function () {
+  destP.style.color = "red";
+});
